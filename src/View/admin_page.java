@@ -6,6 +6,7 @@
 package View;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 /**
  *
  * @author Brian-Kamau
@@ -165,7 +166,7 @@ public class admin_page extends javax.swing.JFrame {
         
         return exit_menu;
     }
-    public JTextField fetchPassword(){
+    public JPasswordField fetchPassword(){
         
         return txtpassword;
     }

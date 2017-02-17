@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 package View;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
- * @author root
+ * @author Brian-Kamau
  */
-public class add_removeteams extends javax.swing.JPanel {
+public class addRremoveTeams extends javax.swing.JPanel {
 
     /**
      * Creates new form add_removeteams
      */
-    public add_removeteams() {
+    public addRremoveTeams() {
         initComponents();
     }
 
@@ -30,12 +33,12 @@ public class add_removeteams extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        teamName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        teamManager = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        addReTeams = new javax.swing.JComboBox<>();
+        submitTeam = new javax.swing.JButton();
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -56,7 +59,7 @@ public class add_removeteams extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 189;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(29, 6, 0, 53);
-        jPanel1.add(jTextField1, gridBagConstraints);
+        jPanel1.add(teamName, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel2.setText("TEAM MANAGER");
@@ -75,7 +78,7 @@ public class add_removeteams extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 189;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 6, 0, 53);
-        jPanel1.add(jTextField2, gridBagConstraints);
+        jPanel1.add(teamManager, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel3.setText("ADD/REMOVE");
@@ -87,8 +90,8 @@ public class add_removeteams extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(29, 35, 0, 0);
         jPanel1.add(jLabel3, gridBagConstraints);
 
-        jComboBox1.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADD", "REMOVE" }));
+        addReTeams.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        addReTeams.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADD", "REMOVE" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -96,10 +99,10 @@ public class add_removeteams extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 41;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 6, 0, 0);
-        jPanel1.add(jComboBox1, gridBagConstraints);
+        jPanel1.add(addReTeams, gridBagConstraints);
 
-        jButton1.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        jButton1.setText("SUBMIT");
+        submitTeam.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        submitTeam.setText("SUBMIT");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -107,7 +110,7 @@ public class add_removeteams extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 99;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(48, 28, 59, 53);
-        jPanel1.add(jButton1, gridBagConstraints);
+        jPanel1.add(submitTeam, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -126,16 +129,27 @@ public class add_removeteams extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    public JTextField getTeamName(){
+        return teamName;
+    }
+    public JTextField getTeamManager(){
+        return teamManager;
+    }
+    public JButton giveTeam(){
+        return submitTeam;
+    }
+    public JComboBox chooseAddReTeams(){
+        return addReTeams;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> addReTeams;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton submitTeam;
+    private javax.swing.JTextField teamManager;
+    private javax.swing.JTextField teamName;
     // End of variables declaration//GEN-END:variables
 }

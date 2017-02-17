@@ -14,12 +14,12 @@ import javax.swing.JSpinner;
  *
  * @author Brian-Kamau
  */
-public class mainview extends javax.swing.JFrame {
+public class mainView extends javax.swing.JFrame {
 
     /**
      * Creates new form maintems
      */
-    public mainview() {
+    public mainView() {
         initComponents();
     }
 
@@ -34,27 +34,27 @@ public class mainview extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        borrow_list = new javax.swing.JTable();
+        borrowList = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox_team = new javax.swing.JComboBox<>();
+        jComboBoxTeam = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        stu_id = new javax.swing.JTextField();
+        stuID = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        stu_name = new javax.swing.JTextField();
+        stuName = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox_items = new javax.swing.JComboBox<>();
+        jComboBoxItems = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        item_number = new javax.swing.JSpinner();
-        submitto_table = new javax.swing.JButton();
-        submit_data = new javax.swing.JButton();
+        itemNumber = new javax.swing.JSpinner();
+        submittoTable = new javax.swing.JButton();
+        submitData = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        add_remove = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        addRemove = new javax.swing.JButton();
+        checkInventory = new javax.swing.JButton();
+        addRTeams = new javax.swing.JButton();
+        reItems = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        borrow_list.setModel(new javax.swing.table.DefaultTableModel(
+        borrowList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -80,19 +80,19 @@ public class mainview extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(borrow_list);
-        if (borrow_list.getColumnModel().getColumnCount() > 0) {
-            borrow_list.getColumnModel().getColumn(1).setResizable(false);
-            borrow_list.getColumnModel().getColumn(2).setResizable(false);
-            borrow_list.getColumnModel().getColumn(3).setResizable(false);
-            borrow_list.getColumnModel().getColumn(4).setResizable(false);
+        jScrollPane1.setViewportView(borrowList);
+        if (borrowList.getColumnModel().getColumnCount() > 0) {
+            borrowList.getColumnModel().getColumn(1).setResizable(false);
+            borrowList.getColumnModel().getColumn(2).setResizable(false);
+            borrowList.getColumnModel().getColumn(3).setResizable(false);
+            borrowList.getColumnModel().getColumn(4).setResizable(false);
         }
 
         jLabel1.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel1.setText("Team");
 
-        jComboBox_team.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hockey", "FootBall", "Tennis", "Rugby", "BasketBall" }));
-        jComboBox_team.setToolTipText("");
+        jComboBoxTeam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hockey", "FootBall", "Tennis", "Rugby", "BasketBall" }));
+        jComboBoxTeam.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel2.setText("Student ID");
@@ -100,50 +100,50 @@ public class mainview extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel3.setText("Name");
 
-        stu_name.addActionListener(new java.awt.event.ActionListener() {
+        stuName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stu_nameActionPerformed(evt);
+                stuNameActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel4.setText("Item Type");
 
-        jComboBox_items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Balls", "Cones", "Hockey Sticks", "Nets", "Bats", "Shin Guards", "Rackets", "Shuttle Corks" }));
-        jComboBox_items.setToolTipText("");
-        jComboBox_items.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxItems.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Balls", "Cones", "Hockey Sticks", "Nets", "Bats", "Shin Guards", "Rackets", "Shuttle Corks" }));
+        jComboBoxItems.setToolTipText("");
+        jComboBoxItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_itemsActionPerformed(evt);
+                jComboBoxItemsActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel5.setText("Amount");
 
-        item_number.addFocusListener(new java.awt.event.FocusAdapter() {
+        itemNumber.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                item_numberFocusLost(evt);
+                itemNumberFocusLost(evt);
             }
         });
 
-        submitto_table.setText("Preview");
-        submitto_table.addActionListener(new java.awt.event.ActionListener() {
+        submittoTable.setText("Preview");
+        submittoTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitto_tableActionPerformed(evt);
+                submittoTableActionPerformed(evt);
             }
         });
 
-        submit_data.setText("Submit");
+        submitData.setText("Submit");
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        add_remove.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        add_remove.setText("ADD/REMOVE ITEMS");
-        add_remove.addActionListener(new java.awt.event.ActionListener() {
+        addRemove.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        addRemove.setText("ADD/REMOVE ITEMS");
+        addRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                add_removeActionPerformed(evt);
+                addRemoveActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -152,13 +152,13 @@ public class mainview extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(19, 23, 0, 34);
-        jPanel1.add(add_remove, gridBagConstraints);
+        jPanel1.add(addRemove, gridBagConstraints);
 
-        jButton2.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        jButton2.setText("CHECK INVENTORY");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        checkInventory.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        checkInventory.setText("CHECK INVENTORY");
+        checkInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                checkInventoryActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -167,26 +167,26 @@ public class mainview extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 23, 0, 34);
-        jPanel1.add(jButton2, gridBagConstraints);
+        jPanel1.add(checkInventory, gridBagConstraints);
 
-        jButton3.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        jButton3.setText("ADD/REMOVE TEAMS");
+        addRTeams.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        addRTeams.setText("ADD/REMOVE TEAMS");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 23, 0, 34);
-        jPanel1.add(jButton3, gridBagConstraints);
+        jPanel1.add(addRTeams, gridBagConstraints);
 
-        jButton4.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
-        jButton4.setText("RETURN ITEMS");
+        reItems.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        reItems.setText("RETURN ITEMS");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.ipadx = 41;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 23, 17, 34);
-        jPanel1.add(jButton4, gridBagConstraints);
+        jPanel1.add(reItems, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         jLabel6.setText("Commands");
@@ -213,18 +213,18 @@ public class mainview extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBox_team, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(stu_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(stu_name, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBox_items, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(item_number, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(submitto_table, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addComponent(jComboBoxTeam, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(stuID, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(stuName, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxItems, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(itemNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(submittoTable, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(submit_data, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(submitData, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -235,19 +235,19 @@ public class mainview extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(submit_data))
+                        .addComponent(submitData))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox_team, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTeam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(stu_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(stuID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(stu_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(stuName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox_items, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(item_number, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(itemNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(24, 24, 24)
@@ -259,7 +259,7 @@ public class mainview extends javax.swing.JFrame {
                                 .addGap(30, 30, 30)
                                 .addComponent(jLabel5)))
                         .addGap(18, 18, 18)
-                        .addComponent(submitto_table)
+                        .addComponent(submittoTable)
                         .addGap(16, 16, 16)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -268,69 +268,80 @@ public class mainview extends javax.swing.JFrame {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void stu_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stu_nameActionPerformed
+    private void stuNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_stu_nameActionPerformed
+    }//GEN-LAST:event_stuNameActionPerformed
 
-    private void submitto_tableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitto_tableActionPerformed
+    private void submittoTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submittoTableActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_submitto_tableActionPerformed
+    }//GEN-LAST:event_submittoTableActionPerformed
 
-    private void jComboBox_itemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_itemsActionPerformed
+    private void jComboBoxItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxItemsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox_itemsActionPerformed
+    }//GEN-LAST:event_jComboBoxItemsActionPerformed
 
-    private void item_numberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_item_numberFocusLost
+    private void itemNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNumberFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_item_numberFocusLost
+    }//GEN-LAST:event_itemNumberFocusLost
 
-    private void add_removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_removeActionPerformed
+    private void addRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRemoveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_add_removeActionPerformed
+    }//GEN-LAST:event_addRemoveActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void checkInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkInventoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_checkInventoryActionPerformed
     public JTextField getStudent_id(){
-        return stu_id;
+        return stuID;
     }
     public JComboBox getSport(){
-        return jComboBox_team;
+        return jComboBoxTeam;
     }
     public JComboBox getItem(){
-        return jComboBox_items;
+        return jComboBoxItems;
     }
     public JTextField getStudent_name(){
-        return stu_name;
+        return stuName;
         
     }
     public JSpinner getItem_no(){
         
-        return item_number;
+        return itemNumber;
     }
     public JButton getPreview(){
         
-        return submitto_table;
+        return submittoTable;
     }
     public JButton submitTable(){
-        return submit_data;
+        return submitData;
     }
     public JTable getBorrowLIist(){
-        return borrow_list;
+        return borrowList;
+    }
+    public JButton editItems(){
+        return addRemove;
+    }
+    public JButton editTeams(){
+        return addRTeams;
+    }
+    public JButton checkInvento(){
+        return checkInventory;
+    }
+    public JButton returnItems(){
+        return reItems;
     }
     
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton add_remove;
-    private javax.swing.JTable borrow_list;
-    private javax.swing.JSpinner item_number;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox_items;
-    private javax.swing.JComboBox<String> jComboBox_team;
+    private javax.swing.JButton addRTeams;
+    private javax.swing.JButton addRemove;
+    private javax.swing.JTable borrowList;
+    private javax.swing.JButton checkInventory;
+    private javax.swing.JSpinner itemNumber;
+    private javax.swing.JComboBox<String> jComboBoxItems;
+    private javax.swing.JComboBox<String> jComboBoxTeam;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -339,9 +350,10 @@ public class mainview extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField stu_id;
-    private javax.swing.JTextField stu_name;
-    private javax.swing.JButton submit_data;
-    private javax.swing.JButton submitto_table;
+    private javax.swing.JButton reItems;
+    private javax.swing.JTextField stuID;
+    private javax.swing.JTextField stuName;
+    private javax.swing.JButton submitData;
+    private javax.swing.JButton submittoTable;
     // End of variables declaration//GEN-END:variables
 }

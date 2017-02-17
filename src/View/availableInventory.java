@@ -4,17 +4,18 @@
  * and open the template in the editor.
  */
 package View;
+import javax.swing.JTable;
 
 /**
  *
  * @author root
  */
-public class available_inventory extends javax.swing.JPanel {
+public class availableInventory extends javax.swing.JPanel {
 
     /**
      * Creates new form available_inventory
      */
-    public available_inventory() {
+    public availableInventory() {
         initComponents();
     }
 
@@ -28,9 +29,9 @@ public class available_inventory extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        borrow_list = new javax.swing.JTable();
+        borrowList = new javax.swing.JTable();
 
-        borrow_list.setModel(new javax.swing.table.DefaultTableModel(
+        borrowList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -56,7 +57,7 @@ public class available_inventory extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(borrow_list);
+        jScrollPane1.setViewportView(borrowList);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,10 +70,12 @@ public class available_inventory extends javax.swing.JPanel {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-
+       public JTable getBorrowList(){
+           return borrowList;
+           
+       }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable borrow_list;
+    private javax.swing.JTable borrowList;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

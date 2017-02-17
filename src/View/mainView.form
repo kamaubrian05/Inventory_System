@@ -40,13 +40,13 @@
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox_team" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="stu_id" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="stu_name" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="jComboBox_items" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="item_number" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="jComboBoxTeam" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="stuID" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="stuName" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="jComboBoxItems" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="itemNumber" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="submitto_table" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="submittoTable" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -55,7 +55,7 @@
                   <Component id="jScrollPane1" pref="637" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="submit_data" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="submitData" min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -70,20 +70,20 @@
                   <Group type="102" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="submit_data" min="-2" max="-2" attributes="0"/>
+                      <Component id="submitData" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jComboBox_team" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxTeam" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="stu_id" min="-2" max="-2" attributes="0"/>
+                              <Component id="stuID" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="stu_name" min="-2" max="-2" attributes="0"/>
+                              <Component id="stuName" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="jComboBox_items" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxItems" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="item_number" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="itemNumber" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" pref="25" max="-2" attributes="0"/>
@@ -98,7 +98,7 @@
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="submitto_table" min="-2" max="-2" attributes="0"/>
+                      <Component id="submittoTable" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -118,7 +118,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="borrow_list">
+        <Component class="javax.swing.JTable" name="borrowList">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="4">
@@ -173,7 +173,7 @@
         <Property name="text" type="java.lang.String" value="Team"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_team">
+    <Component class="javax.swing.JComboBox" name="jComboBoxTeam">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="5">
@@ -198,7 +198,7 @@
         <Property name="text" type="java.lang.String" value="Student ID"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="stu_id">
+    <Component class="javax.swing.JTextField" name="stuID">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -208,9 +208,9 @@
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="stu_name">
+    <Component class="javax.swing.JTextField" name="stuName">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stu_nameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stuNameActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -221,7 +221,7 @@
         <Property name="text" type="java.lang.String" value="Item Type"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_items">
+    <Component class="javax.swing.JComboBox" name="jComboBoxItems">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="8">
@@ -238,7 +238,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_itemsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxItemsActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -252,20 +252,20 @@
         <Property name="text" type="java.lang.String" value="Amount"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSpinner" name="item_number">
+    <Component class="javax.swing.JSpinner" name="itemNumber">
       <Events>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="item_numberFocusLost"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="itemNumberFocusLost"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="submitto_table">
+    <Component class="javax.swing.JButton" name="submittoTable">
       <Properties>
         <Property name="text" type="java.lang.String" value="Preview"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitto_tableActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submittoTableActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="submit_data">
+    <Component class="javax.swing.JButton" name="submitData">
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
@@ -284,7 +284,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="add_remove">
+        <Component class="javax.swing.JButton" name="addRemove">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="DejaVu Sans" size="12" style="1"/>
@@ -292,7 +292,7 @@
             <Property name="text" type="java.lang.String" value="ADD/REMOVE ITEMS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add_removeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addRemoveActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -300,7 +300,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="checkInventory">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="DejaVu Sans" size="12" style="1"/>
@@ -308,7 +308,7 @@
             <Property name="text" type="java.lang.String" value="CHECK INVENTORY"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkInventoryActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -316,7 +316,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="addRTeams">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="DejaVu Sans" size="12" style="1"/>
@@ -329,7 +329,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="reItems">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="DejaVu Sans" size="12" style="1"/>

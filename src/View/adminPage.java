@@ -11,12 +11,12 @@ import javax.swing.JPasswordField;
  *
  * @author Brian-Kamau
  */
-public class admin_page extends javax.swing.JFrame {
+public class adminPage extends javax.swing.JFrame {
 
     /**
      * Creates new form admin_page
      */
-    public admin_page() {
+    public adminPage() {
         initComponents();
     }
 
